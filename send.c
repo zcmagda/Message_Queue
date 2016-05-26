@@ -4,24 +4,26 @@
 #include <stdio.h>
 
 struct buf {
-	long mtype;
-	char mvalue[20];
+	long type;
+	char value[20];
 }word;
 
-#define cool_msg  
+#define cool_msg 100
 
 int main() {
 
-	word.mtype=cool_msg;
-
-	printf("Enter the word: ");
-	scanf("%s",word.mvalue);
-
-	int wordID=msgget(,IPC_CREAT | 0600);
-
-	if (wordID==-1) {
-		perror("msgget");
-	}
+	word.type=cool_msg;
 	
+	printf("Enter the word: ");
+	scanf("%s",word.value);
+
+	key_t key=ftok("./send",'b');
+	int wordID=msgget(key,IPC_CREAT | 0600);
+
+	if (wordID == -1)
+		perror("msgget failed");
+
+	if(msgsnd(wordID,&word,sizeof(word.value),IPC_NOWAIT) == -1)
+		perror("msgsend failed");
 return 0;
 }
