@@ -8,22 +8,28 @@ struct buf {
 	char value[20];
 }word;
 
-#define cool_msg 100
-
 int main() {
 
-	word.type=cool_msg;
-	
+	key_t key;
+	int wordID;
+
 	printf("Enter the word: ");
 	scanf("%s",word.value);
+	word.type=1;
+	
+	if ((key=ftok("./send",'b')) == -1) {
+		perror("ftok");
+		exit(1);
+	}
 
-	key_t key=ftok("./send",'b');
-	int wordID=msgget(key,IPC_CREAT | 0600);
-
-	if (wordID == -1)
-		perror("msgget failed");
+	
+	if ((wordID=msgget(key,0600 | IPC_CREAT)) == -1) {
+		perror("msgget");
+		exit(1);
+	}
 
 	if(msgsnd(wordID,&word,sizeof(word.value),IPC_NOWAIT) == -1)
-		perror("msgsend failed");
+		perror("msgsend");
+
 return 0;
 }
