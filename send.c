@@ -8,7 +8,7 @@ struct buf {
 	char value[20];
 }word;
 
-#define cool_msg 100
+#define cool_msg 90
 
 int main() {
 
