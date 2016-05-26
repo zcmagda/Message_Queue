@@ -4,4 +4,4 @@ Project #5
 CONTENTS:
 
 get_ipcmd.sh - a shell script to download and build a ipcmd
-send.c       - first program 
+send.c       - first C program 
