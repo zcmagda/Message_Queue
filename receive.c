@@ -2,6 +2,7 @@
 #include <sys/msg.h>
 #include <stdio.h>
 #include <time.h>
+#include <unistd.h>
 
 struct buf {
 	long type;
@@ -34,6 +35,12 @@ int main() {
 			perror("msgrcv");
 			exit(1);
 		}
+
+		char *arg[2];
+		arg[0]="./verify.sh";
+		arg[1]=word.value;
+		
+		execvp(arg[0], arg);
 	}
 
 	else
