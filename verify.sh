@@ -1,9 +1,16 @@
 #!/bin/bash
 
-word=$1
-lg=`echo ${#word}`
-if [[ "${word:0:1}" = [a-zA-Z] ]] ; then
-	#if [[ "$word" = [a-zA-Z0-9]{1,${lg}} ]] ; then
-		echo "$lg"
-	#fi
+msg=$1
+
+if [[ "${msg:0:1}" = [a-zA-Z] ]] ; 
+	then
+		if grep '^[-0-9a-zA-Z]*$' <<<$msg ; 
+			then
+				echo "Message is valid";
+			else
+				echo "Message is invalid";
+		fi
+	else
+		echo "Message is invalid";
 fi
+
