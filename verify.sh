@@ -4,20 +4,20 @@ msg=$1
 
 if [[ "${msg:0:1}" = [a-zA-Z] ]] ; 
 then
-	if grep '^[0-9a-zA-Z]*$' <<<$msg ; 
+	if [[ $msg == *[[:ascii:]]* ]]
 	then
 		check=`echo ${msg} | aspell list -l pl`
 
 		if [[ "${check}" == "" ]] ;
 		then
-			echo "Message is valid";
+			echo "Przeslane slowo jest poprawne w jezyku polskim";
 		else
-			echo "Message is invalid";
+			echo "Przeslane slowo nie jest poprawne w jezyku polskim";
 		fi
 	else
-		echo "Message is invalid";
+		echo "Przeslana wiadomosc nie sklada sie ze znakow ASCII";
 	fi
 else
-	echo "Message is invalid";
+	echo "Przeslana wiadomosc nie rozpoczyna sie od litery";
 fi
-
+#grep '^[0-9a-zA-Z]*$' <<<$msg ; 
