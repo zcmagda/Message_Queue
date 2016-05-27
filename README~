@@ -1,8 +1,0 @@
-Operating systems 2016 
-Project #5
-
-CONTENTS:
-
-get_ipcmd.sh - shell script   / download and build a ipcmd
-send.c       - C program      / send message
-receive.c    - C program      / get message
