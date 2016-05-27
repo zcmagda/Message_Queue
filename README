@@ -3,7 +3,7 @@ Projekt #5
 ----------------------
 ZAWARTOŚĆ:
 ----------------------
-get_ipcmd.sh - skrypt pobierający i budujący API IPC samodzielnie
+get_ipcmd.sh - skrypt pobierający i budujący API IPC
 send.c       - program przyjmujący wiadomość z klawiatury i przesyłający go 
 	       do systemowej kolejki komunikatów 
 receive.c    - program odbierający komunikat z kolejki ale tylko w weekendy
