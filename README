@@ -8,7 +8,7 @@ send.c       - program przyjmujący wiadomość z klawiatury i przesyłający go
 	       do systemowej kolejki komunikatów 
 receive.c    - program odbierający komunikat z kolejki ale tylko w weekendy
 verify.sh    - skrypt weryfikujący, czy wyraz odebrany przez program receive.c 
-	       jest poprawny (składa się tylko ze znaków/cyfr, zaczyna od litery 
+	       jest poprawny (składa się tylko ze znaków ASCII, zaczyna od litery, 
 	       jest porawnym wyrazem w języku polskim)
 Makefile     - POSIX Makefile
 queue.sh     - skrypt uruchamiający projekt
