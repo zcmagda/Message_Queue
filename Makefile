@@ -8,3 +8,5 @@ receive: receive.c
 	
 clean:
 	rm send receive
+
+
