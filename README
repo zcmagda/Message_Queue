@@ -15,9 +15,9 @@ Makefile     - POSIX Makefile
 README       - plik zawierający podstawowe informacje na temat projeku
 LICENSE      - licencja GNU
 ----------------------
-KONFIGURACJA:
+INFO:
 ----------------------
 Aby projekt zadziałał należy zaopatrzyć sie w API IPC.
-Uruchamiamy skrypt queue.sh
+Rozpoczynamy uruchamiając skrypt queue.sh
 ----------------------
 what i was supposed to do: http://home.agh.edu.pl/~kamdud/os2/5-1.pdf
