@@ -12,7 +12,7 @@ verify.sh    - skrypt weryfikujący, czy wyraz odebrany przez program receive.c
 	       jest poprawny (składa się tylko ze znaków ASCII, zaczyna od litery, 
 	       jest porawnym wyrazem w języku polskim)
 Makefile     - POSIX Makefile
-README       - plik zawierający podstawowe informacje na temat projeku
+README       - plik zawierający podstawowe info na temat projeku
 LICENSE      - licencja GNU
 ----------------------
 INFO:
