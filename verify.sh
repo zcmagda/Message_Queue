@@ -20,4 +20,3 @@ then
 else
 	echo "Przeslana wiadomosc nie rozpoczyna sie od litery";
 fi
-#grep '^[0-9a-zA-Z]*$' <<<$msg ; 
